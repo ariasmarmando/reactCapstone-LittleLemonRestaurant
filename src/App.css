@@ -245,3 +245,7 @@
   grid-column: 3;
   grid-row: 1/2;
 }
+#fsocialIcon {
+  padding: 5px;
+  max-inline-size: 2.5em;
+}

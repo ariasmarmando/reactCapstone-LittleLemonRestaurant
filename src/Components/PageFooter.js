@@ -34,6 +34,20 @@ const PageFooter = () => {
         </ul>
         <ul>
           <h3>Social Media</h3>
+          <a href="https://www.facebook.com">
+            <img
+              id="fsocialIcon"
+              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Facebook_colored_svg_copy-512.png"
+              alt=""
+            ></img>
+          </a>
+          <a href="https://www.instagram.com">
+            <img
+              id="fsocialIcon"
+              src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png"
+              alt=""
+            ></img>
+          </a>
         </ul>
       </div>
     </div>
