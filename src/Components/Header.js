@@ -1,6 +1,6 @@
-import "./App.css";
-import RegButton from "./RegButton";
-import headerIMG from "./Images/restauranfood.jpg";
+import "../App.css";
+import RegButton from "./RegButton.js";
+import headerIMG from "../Images/restauranfood.jpg";
 
 const Header = (props) => {
   return (

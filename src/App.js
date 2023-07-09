@@ -1,8 +1,8 @@
 import "./App.css";
-import Nav from "./Nav";
-import Header from "./Header";
-import SpecialsWrapper from "./SpecialsWrapper";
-import PageFooter from "./PageFooter";
+import Nav from "./Components/Nav";
+import Header from "./Components/Header";
+import SpecialsWrapper from "./Components/SpecialsWrapper";
+import PageFooter from "./Components/PageFooter";
 
 const restaurantTitle = "Little Lemon";
 const locationTitle = "California";

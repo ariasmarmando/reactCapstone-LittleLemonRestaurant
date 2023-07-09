@@ -1,5 +1,5 @@
-import "./App.css";
-import LogoImg from "./Images/Logo.webp";
+import "../App.css";
+import LogoImg from "../Images/Logo.webp";
 
 const Nav = () => {
   return (
