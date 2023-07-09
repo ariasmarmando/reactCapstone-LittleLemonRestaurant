@@ -1,8 +1,8 @@
-import "./App.css";
+import "../App.css";
 import RegButton from "./RegButton";
 import SpecialItem from "./SpecialItem";
-import specialItem1 from "./Images/greek salad.jpg";
-import specialItem3 from "./Images/lemon dessert.jpg";
+import specialItem1 from "../Images/greek salad.jpg";
+import specialItem3 from "../Images/lemon dessert.jpg";
 
 const specialItemList1 = "Greek Salad";
 const specialItemPrice1 = 12.99;

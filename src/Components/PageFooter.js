@@ -1,5 +1,5 @@
-import "./App.css";
-import FooterLogo from "./Images/logoLLR.png";
+import "../App.css";
+import FooterLogo from "../Images/logoLLR.png";
 const PageFooter = () => {
   return (
     <div className="greenContainer">
