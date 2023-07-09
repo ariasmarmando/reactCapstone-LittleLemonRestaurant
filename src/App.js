@@ -2,7 +2,7 @@ import "./App.css";
 import Nav from "./Nav";
 import Header from "./Header";
 import SpecialsWrapper from "./SpecialsWrapper";
-import Testimonials from "./Testimonials";
+import PageFooter from "./PageFooter";
 
 const restaurantTitle = "Little Lemon";
 const locationTitle = "California";
@@ -19,7 +19,7 @@ function App() {
         desc={restaurantDesc}
       />
       <SpecialsWrapper />
-      <Testimonials />
+      <PageFooter />
     </div>
   );
 }
