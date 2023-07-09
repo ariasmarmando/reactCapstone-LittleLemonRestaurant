@@ -230,9 +230,12 @@
   color: #edefee;
   text-decoration: none;
 }
-.footer-grid ul p {
+.footer-grid ul h3 {
   color: #f4ce14;
   font-weight: bold;
+}
+.footer-grid ul p {
+  color: #edefee;
 }
 .footer-grid :nth-child(2) {
   grid-column: 2;
