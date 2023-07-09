@@ -6,7 +6,7 @@ const PageFooter = () => {
       <div className="footer-grid">
         <img src={FooterLogo} alt="" />
         <ul>
-          <p>Doormat Nav</p>
+          <h3>Doormat Nav</h3>
           <li>
             <a href="./">Home</a>
           </li>
@@ -27,10 +27,13 @@ const PageFooter = () => {
           </li>
         </ul>
         <ul>
-          <p>Contact</p>
+          <h3>Contact</h3>
+          <p>123st, San Fransico, CA 123456</p>
+          <p>#: 123-123-1234</p>
+          <p>littlelemon@notreal.com</p>
         </ul>
         <ul>
-          <p>Social Media</p>
+          <h3>Social Media</h3>
         </ul>
       </div>
     </div>
