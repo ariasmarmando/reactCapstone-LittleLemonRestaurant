@@ -212,3 +212,33 @@
 #T-overGreen {
   color: #edefee;
 }
+
+.footer-grid {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 auto;
+}
+.footer-grid ul {
+  list-style-type: none;
+}
+.footer-grid li {
+  padding-top: 10px;
+}
+.footer-grid a {
+  color: #edefee;
+  text-decoration: none;
+}
+.footer-grid ul p {
+  color: #f4ce14;
+  font-weight: bold;
+}
+.footer-grid :nth-child(2) {
+  grid-column: 2;
+  grid-row: 1/2;
+}
+.footer-grid :nth-child(3) {
+  grid-column: 3;
+  grid-row: 1/2;
+}

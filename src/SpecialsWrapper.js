@@ -2,6 +2,7 @@ import "./App.css";
 import RegButton from "./RegButton";
 import SpecialItem from "./SpecialItem";
 import specialItem1 from "./Images/greek salad.jpg";
+import specialItem3 from "./Images/lemon dessert.jpg";
 
 const specialItemList1 = "Greek Salad";
 const specialItemPrice1 = 12.99;
@@ -30,7 +31,7 @@ const SpecialsWrapper = () => {
         SpecialItemLinkIMG=""
       />
       <SpecialItem
-        specialItem={specialItem1}
+        specialItem={specialItem3}
         specialItemName={specialItemList1}
         specialItemPrice={specialItemPrice1}
         SpecialDesc={specialItemDesc1}
