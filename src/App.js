@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import SpecialsWrapper from "./Components/SpecialsWrapper";
 import PageFooter from "./Components/PageFooter";
 import Testimonials from "./Components/Testimonials";
+import AboutUs from "./Components/AboutUs-Section";
 
 const restaurantTitle = "Little Lemon";
 const locationTitle = "California";
@@ -21,6 +22,11 @@ function App() {
       />
       <SpecialsWrapper />
       <Testimonials />
+      <AboutUs
+        Atitle={restaurantTitle}
+        ALtitle={locationTitle}
+        aboutusdesc={restaurantDesc}
+      />
       <PageFooter />
     </div>
   );
