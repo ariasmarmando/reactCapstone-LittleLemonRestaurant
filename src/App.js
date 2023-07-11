@@ -3,6 +3,7 @@ import Nav from "./Components/Nav";
 import Header from "./Components/Header";
 import SpecialsWrapper from "./Components/SpecialsWrapper";
 import PageFooter from "./Components/PageFooter";
+import Testimonials from "./Components/Testimonials";
 
 const restaurantTitle = "Little Lemon";
 const locationTitle = "California";
@@ -19,6 +20,7 @@ function App() {
         desc={restaurantDesc}
       />
       <SpecialsWrapper />
+      <Testimonials />
       <PageFooter />
     </div>
   );
