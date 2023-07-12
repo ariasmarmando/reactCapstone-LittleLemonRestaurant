@@ -7,15 +7,17 @@ const TestimonialCard = (props) => {
     <div className="tes-card">
       <div>
         {[...Array(starRating)].map((star, index) => {
-          return <FaStar key={index} color="#FFC403" fontSize="1.5em" />;
+          return <FaStar key={index} color="#FFC403" id="reactIconsStar" />;
         })}
       </div>
       <div className="ReviwerIMGContainer">
-        <FaUserCircle color="#333333" fontSize="2em" />
+        <FaUserCircle color="#333333" id="reactIconsUser" />
       </div>
 
-      <p>{props.reviewName}</p>
-      <p>{props.reviewReview}</p>
+      <p id="ReviwerName">{props.reviewName}</p>
+      <div className="ReviewComment">
+        <p>{props.reviewReview}</p>
+      </div>
     </div>
   );
 };

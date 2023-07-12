@@ -7,9 +7,7 @@ const SpecialItem = (props) => {
       <p id="spItemName">{props.specialItemName}</p>
       <p id="spItemPrice">{props.specialItemPrice}</p>
       <p id="spItemDescription">{props.SpecialDesc}</p>
-      <a href={props.SpecialItemLink}>
-        Order for delivery{props.SpecialItemLinkIMG}
-      </a>
+      <a href={props.SpecialItemLink}>Order for delivery</a>
     </div>
   );
 };
