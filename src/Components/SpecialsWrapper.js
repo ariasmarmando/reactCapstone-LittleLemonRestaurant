@@ -13,14 +13,13 @@ const SpecialsWrapper = () => {
   return (
     <div className="nobgContainer">
       <p>This week's specials!</p>
-      <RegButton buttonName="Online Menu" />
+      <RegButton LinkRoute="" buttonName="Online Menu" />
       <SpecialItem
         specialItem={specialItem1}
         specialItemName={specialItemList1}
         specialItemPrice={specialItemPrice1}
         SpecialDesc={specialItemDesc1}
         SpecialItemLink="./"
-        SpecialItemLinkIMG=""
       />
       <SpecialItem
         specialItem={specialItem1}
@@ -28,7 +27,6 @@ const SpecialsWrapper = () => {
         specialItemPrice={specialItemPrice1}
         SpecialDesc={specialItemDesc1}
         SpecialItemLink="./"
-        SpecialItemLinkIMG=""
       />
       <SpecialItem
         specialItem={specialItem3}
@@ -36,7 +34,6 @@ const SpecialsWrapper = () => {
         specialItemPrice={specialItemPrice1}
         SpecialDesc={specialItemDesc1}
         SpecialItemLink="./"
-        SpecialItemLinkIMG=""
       />
     </div>
   );

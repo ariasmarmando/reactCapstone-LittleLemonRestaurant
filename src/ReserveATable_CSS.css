@@ -1,0 +1,942 @@
+.ReserveATable {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 0.4fr 1fr 0.4fr;
+  grid-template-rows: 2fr 0.2fr 0.5fr 0.1fr 0.1fr 0.1fr 0.1fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 2fr;
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+}
+#RAT-Title {
+  grid-column: 1;
+  grid-row: 1 / 2;
+  color: #495e57;
+  font-size: 1.6vw;
+  text-align: left;
+}
+.ReserveATable h3 {
+  grid-row: 1 / 2;
+  font-size: 2vw;
+}
+
+.Table-view {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  margin: 0 auto;
+  width: 40vw;
+  height: 30vw;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+#PartyLimit {
+  font-size: 2vw;
+  margin: auto 0;
+  color: #ee9972;
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  text-align: left;
+}
+
+#Circle {
+  grid-column: 1 / span 5;
+  grid-row: 1/5;
+  margin: auto auto;
+  width: 20vw;
+  height: 20vw;
+  background: radial-gradient(#f2db68d8 3px, transparent 4px),
+    radial-gradient(#f2db68d4 3px, transparent 4px),
+    linear-gradient(#495e57, 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      #a4a4a4 75px,
+      #a4a4a4 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      #a4a4a4 76px,
+      #a4a4a4 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    #495e57;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  border-radius: 50%;
+  border-color: #f4ce14;
+  border-width: 0.2vw;
+  border-style: solid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  filter: drop-shadow(1px 1px 3px rgba(78, 78, 78, 0.581));
+}
+#Squared-Table {
+  padding: 5px;
+  grid-column: 1 / span 5;
+  grid-row: 1/5;
+  margin: auto auto;
+  width: 20vw;
+  height: 15vw;
+  background: radial-gradient(#f2db68d8 3px, transparent 4px),
+    radial-gradient(#f2db68d4 3px, transparent 4px),
+    linear-gradient(#495e57, 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      #a4a4a4 75px,
+      #a4a4a4 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      #a4a4a4 76px,
+      #a4a4a4 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    #495e57;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  border-radius: 10%;
+  border-color: #f4ce14;
+  border-width: 0.2vw;
+  border-style: solid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  filter: drop-shadow(1px 1px 3px rgba(78, 78, 78, 0.581));
+}
+#Longer-Table {
+  padding: 5px;
+  grid-column: 1 / span 5;
+  grid-row: 1/5;
+  margin: auto auto;
+  width: 25vw;
+  height: 20vw;
+  background: radial-gradient(#f2db68d8 3px, transparent 4px),
+    radial-gradient(#f2db68d4 3px, transparent 4px),
+    linear-gradient(#495e57, 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      #a4a4a4 75px,
+      #a4a4a4 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      #a4a4a4 76px,
+      #a4a4a4 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    #495e57;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  border-radius: 10%;
+  border-color: #f4ce14;
+  border-width: 0.2vw;
+  border-style: solid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  filter: drop-shadow(1px 1px 3px rgba(78, 78, 78, 0.581));
+}
+#Big-Party {
+  padding: 5px;
+  grid-column: 1 / span 5;
+  grid-row: 1/5;
+  margin: auto auto;
+  width: 15vw;
+  height: 25vw;
+  background: radial-gradient(#f2db68d8 3px, transparent 4px),
+    radial-gradient(#f2db68d4 3px, transparent 4px),
+    linear-gradient(#495e57, 4px, transparent 0),
+    linear-gradient(
+      45deg,
+      transparent 74px,
+      transparent 75px,
+      #a4a4a4 75px,
+      #a4a4a4 76px,
+      transparent 77px,
+      transparent 109px
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75px,
+      transparent 76px,
+      #a4a4a4 76px,
+      #a4a4a4 77px,
+      transparent 78px,
+      transparent 109px
+    ),
+    #495e57;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+
+  border-radius: 5%;
+  border-color: #f4ce14;
+  border-width: 0.2vw;
+  border-style: solid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  filter: drop-shadow(1px 1px 3px rgba(78, 78, 78, 0.581));
+}
+#Plate-circle1 {
+  grid-row: 2 / 4;
+  grid-column: 1;
+  margin: auto 0.5vw;
+  width: 4vw;
+  height: 4vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 0.5vw;
+  border-style: solid;
+}
+#Plate-circle2 {
+  grid-row: 2 / 4;
+  grid-column: 5;
+  margin: auto 0.5vw;
+  width: 4vw;
+  height: 4vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 0.5vw;
+  border-style: solid;
+}
+
+#Plate-circle3 {
+  margin: 0 auto;
+  grid-row: 1 / 2;
+  grid-column: 3 / span 4;
+  width: 4vw;
+  height: 4vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle4 {
+  margin: 0 auto;
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+  width: 4vw;
+  height: 4vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle5 {
+  margin: auto;
+  grid-row: 4 / span 5;
+  grid-column: 1 / 3;
+  width: 4vw;
+  height: 4vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle6 {
+  margin: auto;
+  grid-row: 4 / 5;
+  grid-column: 3 / span 4;
+  width: 4vw;
+  height: 4vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle7 {
+  margin: auto;
+  grid-row: 2 / 4;
+  grid-column: 1/2;
+  width: 4vw;
+  height: 4vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle8 {
+  margin: auto;
+  grid-row: 2/4;
+  grid-column: 4;
+  width: 4vw;
+  height: 4vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle9 {
+  margin: auto;
+  grid-row: 1;
+  grid-column: 4;
+  width: 2vw;
+  height: 2vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle10 {
+  margin: auto;
+  grid-row: 2;
+  grid-column: 4;
+  width: 2vw;
+  height: 2vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle11 {
+  margin: auto;
+  grid-row: 3;
+  grid-column: 4;
+  width: 2vw;
+  height: 2vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle12 {
+  margin: auto;
+  grid-row: 4;
+  grid-column: 4;
+  width: 2vw;
+  height: 2vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle13 {
+  margin: auto;
+  grid-row: 1;
+  grid-column: 1;
+  width: 2vw;
+  height: 2vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle14 {
+  margin: auto;
+  grid-row: 2;
+  grid-column: 1;
+  width: 2vw;
+  height: 2vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle15 {
+  margin: auto;
+  grid-row: 3;
+  grid-column: 1;
+  width: 2vw;
+  height: 2vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#Plate-circle16 {
+  margin: auto;
+  grid-row: 4;
+  grid-column: 1;
+  width: 2vw;
+  height: 2vw;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  border-color: #edefee;
+  border-width: 1vw;
+  border-style: solid;
+}
+#mini-circle {
+  margin: auto auto;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-left-color: #495e57;
+  border-left-width: 0.5vw;
+  border-left-style: solid;
+  border-radius: 25%;
+  grid-row: 2/ 4;
+  grid-column: 1 / 3;
+}
+#mini-circle2 {
+  margin: auto auto;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-right-color: #495e57;
+  border-right-width: 0.5vw;
+  border-right-style: solid;
+  border-radius: 25%;
+  grid-row: 2/ 4;
+  grid-column: 3 / 5;
+}
+#mini-circle3 {
+  margin: 40px auto;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-top-color: #495e57;
+  border-top-width: 0.5vw;
+  border-top-style: solid;
+  border-radius: 25%;
+  grid-row: 1;
+  grid-column: 3 / 4;
+}
+#mini-circle4 {
+  margin: 40px auto;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-top-color: #495e57;
+  border-top-width: 0.5vw;
+  border-top-style: solid;
+  border-radius: 25%;
+  grid-row: 1;
+  grid-column: 2 / 3;
+}
+#mini-circle5 {
+  margin: -40px auto;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-bottom-color: #495e57;
+  border-bottom-width: 0.5vw;
+  border-bottom-style: solid;
+  border-radius: 25%;
+  grid-row: 4;
+  grid-column: 3 / 4;
+}
+#mini-circle6 {
+  margin: -40px auto;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-bottom-color: #495e57;
+  border-bottom-width: 0.5vw;
+  border-bottom-style: solid;
+  border-radius: 25%;
+  grid-row: 4;
+  grid-column: 2 / 3;
+}
+#mini-circle7 {
+  margin: 0 9px;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-bottom-color: #495e57;
+  border-bottom-width: 0.5vw;
+  border-bottom-style: solid;
+  border-radius: 25%;
+  grid-row: 4;
+  grid-column: 2 / 3;
+}
+#mini-circle8 {
+  margin: 0 3.4vw;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-bottom-color: #495e57;
+  border-bottom-width: 0.5vw;
+  border-bottom-style: solid;
+  border-radius: 25%;
+  grid-row: 4;
+  grid-column: 3 / span 4;
+}
+#mini-circle9 {
+  margin: 0.8vw 9px;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-top-color: #495e57;
+  border-top-width: 0.5vw;
+  border-top-style: solid;
+  border-radius: 25%;
+  grid-row: 1;
+  grid-column: 2 / 3;
+}
+#mini-circle10 {
+  margin: 0.8vw 3.4vw;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-top-color: #495e57;
+  border-top-width: 0.5vw;
+  border-top-style: solid;
+  border-radius: 25%;
+  grid-row: 1;
+  grid-column: 3 / span 4;
+}
+#mini-circle11 {
+  margin: auto auto;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-left-color: #495e57;
+  border-left-width: 0.5vw;
+  border-left-style: solid;
+  border-radius: 25%;
+  grid-row: 2 / 4;
+  grid-column: 1;
+}
+#mini-circle12 {
+  margin: auto auto;
+  width: 6vw;
+  height: 6vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-right-color: #495e57;
+  border-right-width: 0.5vw;
+  border-right-style: solid;
+  border-radius: 25%;
+  grid-row: 2 / 4;
+  grid-column: 4;
+}
+#mini-circle13 {
+  margin: 4vw 10vw;
+  width: 4vw;
+  height: 4vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-left-color: #495e57;
+  border-left-width: 0.5vw;
+  border-left-style: solid;
+  border-radius: 25%;
+  grid-row: 1 / span 2;
+  grid-column: 1/3;
+}
+#mini-circle14 {
+  margin: auto;
+  width: 4vw;
+  height: 4vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-left-color: #495e57;
+  border-left-width: 0.5vw;
+  border-left-style: solid;
+  border-radius: 25%;
+  grid-row: 2;
+  grid-column: 1/3;
+}
+#mini-circle15 {
+  margin: 1vw auto;
+  width: 4vw;
+  height: 4vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-left-color: #495e57;
+  border-left-width: 0.5vw;
+  border-left-style: solid;
+  border-radius: 25%;
+  grid-row: 3;
+  grid-column: 1/3;
+}
+#mini-circle16 {
+  margin: 0 auto;
+  width: 4vw;
+  height: 4vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-left-color: #495e57;
+  border-left-width: 0.5vw;
+  border-left-style: solid;
+  border-radius: 25%;
+  grid-row: 4;
+  grid-column: 1/3;
+}
+#mini-circle17 {
+  margin: 0 auto;
+  width: 4vw;
+  height: 4vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-right-color: #495e57;
+  border-right-width: 0.5vw;
+  border-right-style: solid;
+  border-radius: 25%;
+  grid-row: 4;
+  grid-column: 3/4;
+}
+#mini-circle18 {
+  margin: 1vw auto;
+  width: 4vw;
+  height: 4vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-right-color: #495e57;
+  border-right-width: 0.5vw;
+  border-right-style: solid;
+  border-radius: 25%;
+  grid-row: 3;
+  grid-column: 3/4;
+}
+#mini-circle19 {
+  margin: auto;
+  width: 4vw;
+  height: 4vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-right-color: #495e57;
+  border-right-width: 0.5vw;
+  border-right-style: solid;
+  border-radius: 25%;
+  grid-row: 2;
+  grid-column: 3/4;
+}
+#mini-circle20 {
+  margin: 3.9vw 1vw;
+  width: 4vw;
+  height: 4vw;
+  background: linear-gradient(
+      45deg,
+      #dca 12%,
+      transparent 0,
+      transparent 88%,
+      #dca 0
+    ),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0)
+      #753;
+  background-size: 25px 25px;
+  border-right-color: #495e57;
+  border-right-width: 0.5vw;
+  border-right-style: solid;
+  border-radius: 25%;
+  grid-row: 1 / 3;
+  grid-column: 3/4;
+}
+#Party {
+  grid-row: 3;
+}
+
+#removePerson {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  border-width: 0.5vw;
+  border-color: #f4ce14;
+  border-style: solid;
+  background-color: #495e57;
+  color: #edefee;
+  font-size: 2vw;
+  margin: 0.5vw;
+}
+#removePerson_OFF {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  border-width: 0.5vw;
+  border-color: #f2db68;
+  border-style: solid;
+  background-color: #93a49e;
+  color: #edefee;
+  font-size: 2vw;
+  margin: 0.5vw;
+}
+#removePerson:hover {
+  background-color: #f4ce14;
+  cursor: pointer;
+  color: #495e57;
+}
+#addPerson {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  border-width: 0.5vw;
+  border-color: #f4ce14;
+  border-style: solid;
+  background-color: #495e57;
+  color: #edefee;
+  font-size: 2vw;
+  margin: 0.5vw;
+}
+#addPerson_OFF {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  border-width: 0.5vw;
+  border-color: #f2db68;
+  border-style: solid;
+  background-color: #93a49e;
+  color: #edefee;
+  font-size: 2vw;
+  margin: 0.5vw;
+}
+#addPerson:hover {
+  background-color: #f4ce14;
+  cursor: pointer;
+  color: #495e57;
+}
+#Party-button h1 {
+  text-align: center;
+  color: #495e57;
+}
+#Party-button h2 {
+  text-align: center;
+  color: #495e57;
+}
+#Date {
+  margin: 0 auto;
+  grid-row: 2/3;
+  grid-column: 2/ 3;
+}
+#Time {
+  grid-row: 7;
+}
+#Name {
+  grid-row: 9;
+}
+#Phone {
+  grid-row: 11;
+}
+#Notes {
+  grid-row: 13;
+}
+
+#DatePickerbg {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(236, 236, 236);
+  grid-row: 3/4;
+  grid-column: 1 / 4;
+  height: 15vw;
+  border-radius: 1vw;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+#calendar-container {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  border-radius: 1vw;
+  filter: drop-shadow(0 0 10px #73737327);
+  grid-row: 2 / span 4;
+  grid-column: 2 / span 8;
+}

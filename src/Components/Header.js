@@ -9,7 +9,7 @@ const Header = (props) => {
         <h1 id="TitleHeader">{props.title}</h1>
         <h3 id="LocationHeader">{props.Ltitle}</h3>
         <p id="T-overGreen">{props.desc}</p>
-        <RegButton buttonName="Reserve a Table" />
+        <RegButton LinkRoute="/reserve-a-table" buttonName="Reserve a Table" />
         <img src={headerIMG} alt=""></img>
       </div>
     </div>
