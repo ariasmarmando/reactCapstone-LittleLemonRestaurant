@@ -291,7 +291,12 @@ const ReserveATable = () => {
         <h3>Select a Date:</h3>
       </div>
       <div id="DatePickerbg">
-        <div id="calendar-container"></div>
+        <div id="calendar-container">
+          <h4>June</h4>
+          <div className="DateDayContainer">
+            <p>S</p>
+          </div>
+        </div>
       </div>
       <div id="Time">
         <h3>Pick a time:</h3>
