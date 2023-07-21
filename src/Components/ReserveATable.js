@@ -11,6 +11,16 @@ const ReserveATable = () => {
   const styleDeside = [{ display: "none" }, { display: "inline" }];
   const [startDate, setStartDate] = useState(null);
   const [timeDeside, setTimeDeside] = useState(null);
+  const [overlayHere, setOverlayHere] = useState(false);
+  const [savedInfo, SetSavedInfo] = useState({
+    size: "",
+    date: "",
+    time: "",
+    name: "",
+    email: "",
+    phone: "",
+    notes: "",
+  });
 
   var timeDesicion = Math.round(timeDeside * 100);
 
@@ -106,8 +116,23 @@ const ReserveATable = () => {
     formCleaner.reset();
     setStartDate(null);
     setPartySize(1);
-    alert("Your table has been reserved," + " " + reservName);
+    setOverlayHere(true);
+    SetSavedInfo({
+      ...savedInfo,
+      size: reservSize,
+      date: reservDate,
+      time: reservTime,
+      name: reservName,
+      email: reservEmail,
+      phone: reservPhone,
+      notes: reservNotes,
+    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(() => {
+      setOverlayHere(false);
+    }, "5000");
   };
+
   const onChange = (e) => {
     setStartDate(e);
     setTimeDeside(Math.random);
@@ -123,8 +148,25 @@ const ReserveATable = () => {
     } else setPartySize((count) => count - 1);
   };
 
+  const overlayClick = () => {
+    setOverlayHere(false);
+  };
+  function Popup() {
+    return (
+      <div
+        className="form_overlay"
+        style={overlayHere === false ? { display: "none" } : { display: "" }}
+      >
+        <button className="overlay_button" onClick={overlayClick}>
+          x
+        </button>
+        <h3>Your reservation has been made, {savedInfo.name}.</h3>
+      </div>
+    );
+  }
   return (
     <div className="ReserveATable">
+      <Popup />
       <div id="RAT-Title">
         <h1>Reserve a table</h1>
       </div>
@@ -391,9 +433,7 @@ const ReserveATable = () => {
       </div>
       <div className="ReservationForm">
         <form onSubmit={handleSubmit} name="reservation-form">
-          <label htmlFor="Party-Size-Selected">
-            You have Selected a party of:
-          </label>
+          <label htmlFor="Party-Size-Selected">How many people?</label>
           <input
             id="Party-Size-Selected"
             className="singleInput"
@@ -406,7 +446,7 @@ const ReserveATable = () => {
               For parties over 8 people, please call us.
             </label>
           ) : null}
-          <label className="singleInput" htmlFor="Date-Selection">
+          <label className="singleLabel" htmlFor="Date-Selection">
             Select a date:
           </label>
           <DatePicker
@@ -422,7 +462,7 @@ const ReserveATable = () => {
             minDate={tomorrow}
             withPortal
           />
-          <label className="singleInput" htmlFor="Time-Selection">
+          <label className="singleLabel" htmlFor="Time-Selection">
             Select a time:
           </label>
           <fieldset>

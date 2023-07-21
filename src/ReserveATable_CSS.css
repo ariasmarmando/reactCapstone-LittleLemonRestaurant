@@ -2,7 +2,7 @@
   justify-content: center;
   display: grid;
   grid-template-columns: 0.4fr 1fr 0.4fr;
-  grid-template-rows: 1fr 0.1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 1fr 0.1fr 1fr 1fr 1fr 0.1fr;
   margin: 0 auto;
   width: 70%;
   height: auto;
@@ -37,7 +37,42 @@
   grid-column: 3;
   text-align: left;
 }
+@keyframes slideLtR {
+  from {
+    transform: translateX(-30px);
+  }
 
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideRtL {
+  from {
+    transform: translateX(30px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideTtB {
+  from {
+    transform: translateY(30px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideBtT {
+  from {
+    transform: translateY(-30px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
 #Circle {
   grid-column: 1 / span 5;
   grid-row: 1/5;
@@ -203,8 +238,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 0.5vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideRtL 1s ease-out 0s 1 normal;
 }
 #Plate-circle2 {
   grid-row: 2 / 4;
@@ -215,8 +251,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 0.5vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideLtR 1s ease-out 0s 1 normal;
 }
 
 #Plate-circle3 {
@@ -228,8 +265,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideTtB 1s ease-out 0s 1 normal;
 }
 #Plate-circle4 {
   margin: 0 auto;
@@ -240,8 +278,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideTtB 1s ease-out 0s 1 normal;
 }
 #Plate-circle5 {
   margin: auto;
@@ -252,8 +291,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideBtT 1s ease-out 0s 1 normal;
 }
 #Plate-circle6 {
   margin: auto;
@@ -264,8 +304,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideBtT 1s ease-out 0s 1 normal;
 }
 #Plate-circle7 {
   margin: auto;
@@ -276,8 +317,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideRtL 1s ease-out 0s 1 normal;
 }
 #Plate-circle8 {
   margin: auto;
@@ -288,8 +330,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideLtR 1s ease-out 0s 1 normal;
 }
 #Plate-circle9 {
   margin: auto;
@@ -300,8 +343,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideLtR 1s ease-out 0s 1 normal;
 }
 #Plate-circle10 {
   margin: auto;
@@ -312,8 +356,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideLtR 1s ease-out 0s 1 normal;
 }
 #Plate-circle11 {
   margin: auto;
@@ -324,8 +369,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideLtR 1s ease-out 0s 1 normal;
 }
 #Plate-circle12 {
   margin: auto;
@@ -336,8 +382,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideLtR 1s ease-out 0s 1 normal;
 }
 #Plate-circle13 {
   margin: auto;
@@ -348,8 +395,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideRtL 1s ease-out 0s 1 normal;
 }
 #Plate-circle14 {
   margin: auto;
@@ -360,8 +408,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideRtL 1s ease-out 0s 1 normal;
 }
 #Plate-circle15 {
   margin: auto;
@@ -372,8 +421,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideRtL 1s ease-out 0s 1 normal;
 }
 #Plate-circle16 {
   margin: auto;
@@ -384,8 +434,9 @@
   background: rgb(233, 233, 233);
   border-radius: 50%;
   border-color: #edefee;
-  border-width: 1vw;
+  border-width: 0.1vw;
   border-style: solid;
+  animation: slideRtL 1s ease-out 0s 1 normal;
 }
 #mini-circle {
   margin: auto auto;
@@ -740,7 +791,7 @@
   grid-column: 1/3;
 }
 #mini-circle17 {
-  margin: 0 auto;
+  margin: 0 1vw;
   width: 4vw;
   height: 4vw;
   background: linear-gradient(
@@ -762,7 +813,7 @@
   grid-column: 3/4;
 }
 #mini-circle18 {
-  margin: 1vw auto;
+  margin: 1vw 1vw;
   width: 4vw;
   height: 4vw;
   background: linear-gradient(
@@ -784,7 +835,7 @@
   grid-column: 3/4;
 }
 #mini-circle19 {
-  margin: auto;
+  margin: auto 1vw;
   width: 4vw;
   height: 4vw;
   background: linear-gradient(
@@ -806,7 +857,7 @@
   grid-column: 3/4;
 }
 #mini-circle20 {
-  margin: 3.9vw 1vw;
+  margin: 4vw 1vw;
   width: 4vw;
   height: 4vw;
   background: linear-gradient(
@@ -887,9 +938,10 @@
   color: #495e57;
 }
 #Party-button {
+  position: relative;
   grid-row: 3;
-  margin: 4vw auto;
-  grid-column: 2 / span 3;
+  margin: 4vw 1vw;
+  grid-column: 2;
 }
 
 #Party-button h1 {
@@ -909,6 +961,7 @@
 }
 .singleInput {
   display: flex;
+  width: 10%;
   margin: 1vw 0px;
 }
 
@@ -939,7 +992,40 @@ label {
 
 .centeredButton {
   display: block;
-  margin: auto auto;
+  margin: 1.5vw auto;
   width: 40%;
   height: auto;
+}
+.singleLabel {
+  display: flex;
+}
+
+.form_overlay {
+  animation: slideBtT 1s ease-out 0s 1 normal;
+  border-radius: 5px;
+  padding: 15px;
+  width: inherit;
+  height: auto;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+  background-color: #f4ce14;
+  color: #495e57;
+}
+
+.overlay_button {
+  grid-column: 2;
+  height: 50%;
+  width: 50%;
+  margin: auto 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #495e57;
+  font-weight: 700;
+  font-size: large;
+  color: #edefee;
+}
+.overlay_button:hover {
+  background-color: #607870;
+  cursor: pointer;
 }
