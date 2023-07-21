@@ -1,0 +1,40 @@
+input {
+  padding: 2vw;
+  margin: 0.5vw 0px;
+  border-radius: 1vw;
+  border: 0.1vw solid #495e57;
+  font-size: 2vw;
+  color: #495e57;
+}
+input[type="radio"] {
+  width: 20px;
+  color: #495e57;
+}
+.formInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.timeselect-label {
+  font-size: inherit;
+  font-weight: bold;
+}
+
+span {
+  font-size: 1.5vw;
+  padding-bottom: 1vw;
+  color: red;
+  display: none;
+}
+input:invalid[focused="true"] ~ span {
+  display: block;
+}
+input:invalid[focused="true"] {
+  border-color: red;
+}

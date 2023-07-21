@@ -1,0 +1,13 @@
+.Submit-Button-Type {
+  font-size: 1.5vw;
+  font-weight: bold;
+  width: 100%;
+  height: 4vw;
+  border: none;
+  border-radius: 5px;
+  background-color: #f4ce14;
+}
+.Submit-Button-Type:hover {
+  cursor: pointer;
+  background-color: #d2b213;
+}

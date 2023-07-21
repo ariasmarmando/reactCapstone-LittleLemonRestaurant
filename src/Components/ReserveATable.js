@@ -1,9 +1,117 @@
 import "../ReserveATable_CSS.css";
 import { useState } from "react";
 import foodPlate from "../Images/foodPlate.svg";
+import FormInput from "./FormInput";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import SubButton from "./SubButton";
 
 const ReserveATable = () => {
   const [partySize, setPartySize] = useState(1);
+  const styleDeside = [{ display: "none" }, { display: "inline" }];
+  const [startDate, setStartDate] = useState(null);
+  const [timeDeside, setTimeDeside] = useState(null);
+
+  var timeDesicion = Math.round(timeDeside * 100);
+
+  var tomorrow = Date.now() + 3600 * 1000 * 24;
+
+  const availableTimes = [
+    {
+      id: 1,
+      time: "5:00PM",
+      label:
+        startDate == null
+          ? styleDeside[0]
+          : Math.round(timeDesicion * Math.random()) % 2 === 0
+          ? styleDeside[1]
+          : styleDeside[0],
+      required:
+        Math.round(timeDesicion * Math.random()) % 2 === 0 ? true : false,
+    },
+    {
+      id: 2,
+      time: "6:00PM",
+      label:
+        startDate == null
+          ? styleDeside[0]
+          : Math.round(timeDesicion * Math.random()) % 2 === 0
+          ? styleDeside[1]
+          : styleDeside[0],
+      required:
+        Math.round(timeDesicion * Math.random()) % 2 === 0 ? true : false,
+    },
+    {
+      id: 3,
+      time: "7:00PM",
+      label:
+        startDate == null
+          ? styleDeside[0]
+          : Math.round(timeDesicion * Math.random()) % 2 === 0
+          ? styleDeside[1]
+          : styleDeside[0],
+      required:
+        Math.round(timeDesicion * Math.random()) % 2 === 0 ? true : false,
+    },
+    {
+      id: 4,
+      time: "8:00PM",
+      label:
+        startDate == null
+          ? styleDeside[0]
+          : Math.round(timeDesicion * Math.random()) % 2 === 0
+          ? styleDeside[1]
+          : styleDeside[0],
+      required:
+        Math.round(timeDesicion * Math.random()) % 2 === 0 ? true : false,
+    },
+    {
+      id: 5,
+      time: "9:00PM",
+      label:
+        startDate == null
+          ? styleDeside[0]
+          : Math.round(timeDesicion * Math.random()) % 2 === 0
+          ? styleDeside[1]
+          : styleDeside[0],
+      required:
+        Math.round(timeDesicion * Math.random()) % 2 === 0 ? true : false,
+    },
+    {
+      id: 6,
+      time: "10:00PM",
+      label:
+        startDate == null
+          ? styleDeside[0]
+          : Math.round(timeDesicion * Math.random()) % 2 === 0
+          ? styleDeside[1]
+          : styleDeside[0],
+      required:
+        Math.round(timeDesicion * Math.random()) % 2 === 0 ? true : false,
+    },
+  ];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    console.log(Object.fromEntries(data.entries()));
+    const reservSize = data.getAll("party");
+    const reservDate = data.getAll("date");
+    const reservTime = data.getAll("Time");
+    const reservName = data.getAll("fullname");
+    const reservEmail = data.getAll("email");
+    const reservPhone = data.getAll("phone");
+    const reservNotes = data.getAll("notes");
+    var formCleaner = document.getElementsByName("reservation-form")[0];
+    formCleaner.reset();
+    setStartDate(null);
+    setPartySize(1);
+    alert("Your table has been reserved," + " " + reservName);
+  };
+  const onChange = (e) => {
+    setStartDate(e);
+    setTimeDeside(Math.random);
+  };
 
   const addPerson = () => {
     if (partySize < 20) {
@@ -18,7 +126,7 @@ const ReserveATable = () => {
   return (
     <div className="ReserveATable">
       <div id="RAT-Title">
-        <h1>Reseve A Table</h1>
+        <h1>Reserve a table</h1>
       </div>
       <div className="Table-view">
         <div id={partySize < 3 ? "mini-circle" : ""}></div>
@@ -268,8 +376,6 @@ const ReserveATable = () => {
         </div>
       </div>
       <div id="Party-button">
-        <h2>Party Size</h2>
-        <h1>{partySize}</h1>
         <button
           id={partySize > 1 ? "removePerson" : "removePerson_OFF"}
           onClick={partySize > 1 ? removePerson : null}
@@ -283,32 +389,113 @@ const ReserveATable = () => {
           +
         </button>
       </div>
-      {partySize > 7 ? (
-        <h2 id="PartyLimit">For parties over 8 people, please call us.</h2>
-      ) : null}
-
-      <div id="Date">
-        <h3>Select a Date:</h3>
-      </div>
-      <div id="DatePickerbg">
-        <div id="calendar-container">
-          <h4>June</h4>
-          <div className="DateDayContainer">
-            <p>S</p>
+      <div className="ReservationForm">
+        <form onSubmit={handleSubmit} name="reservation-form">
+          <label htmlFor="Party-Size-Selected">
+            You have Selected a party of:
+          </label>
+          <input
+            id="Party-Size-Selected"
+            className="singleInput"
+            readOnly
+            name="party"
+            value={partySize}
+          />
+          {partySize > 7 ? (
+            <label id="PartyLimit">
+              For parties over 8 people, please call us.
+            </label>
+          ) : null}
+          <label className="singleInput" htmlFor="Date-Selection">
+            Select a date:
+          </label>
+          <DatePicker
+            id="Date-Selection"
+            name="date"
+            value={startDate}
+            selected={startDate}
+            placeholderText="Please select a date"
+            onChange={onChange}
+            monthsShown={2}
+            required
+            closeOnScroll={true}
+            minDate={tomorrow}
+            withPortal
+          />
+          <label className="singleInput" htmlFor="Time-Selection">
+            Select a time:
+          </label>
+          <fieldset>
+            {availableTimes.map((time) => {
+              return (
+                <div
+                  className="Time-Selection"
+                  key={time.id}
+                  style={time.label}
+                >
+                  <label
+                    className="timeselect-label"
+                    key={time.id}
+                    htmlFor={time.id}
+                    style={time.label}
+                  >
+                    {time.time}
+                    <input
+                      key={time.id}
+                      type="radio"
+                      name="Time"
+                      id={time.id}
+                      value={time.time}
+                      required={time.required}
+                    />
+                  </label>
+                </div>
+              );
+            })}
+            <h3
+              style={
+                startDate == null ? { color: "#EE9972" } : { display: "none" }
+              }
+            >
+              Please select a date first
+            </h3>
+          </fieldset>
+          <FormInput
+            name="fullname"
+            type="text"
+            placeholder="Full Name"
+            errorMessage="Please tell us your name"
+            label="Full Name"
+            required
+          />
+          <FormInput
+            name="email"
+            type="email"
+            placeholder="Email"
+            errorMessage="Something is wrong with your email address"
+            label="Email"
+            required
+          />
+          <FormInput
+            name="phone"
+            type="text"
+            placeholder="Phone Number"
+            errorMessage="Something is wrong with your phone number"
+            label="Phone Number"
+            pattern="^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+            required
+          />
+          <FormInput
+            name="notes"
+            type="text"
+            placeholder="Any special accomodations needed?"
+            label="Notes"
+            maxLength="35"
+          />
+          <div className="centeredButton">
+            <SubButton buttonName="Submit" />
           </div>
-        </div>
-      </div>
-      <div id="Time">
-        <h3>Pick a time:</h3>
-      </div>
-      <div id="Name">
-        <h3>Name:</h3>
-      </div>
-      <div id="Phone">
-        <h3>Phone Number:</h3>
-      </div>
-      <div id="Notes">
-        <h3>Notes:</h3>
+        </form>
       </div>
     </div>
   );
