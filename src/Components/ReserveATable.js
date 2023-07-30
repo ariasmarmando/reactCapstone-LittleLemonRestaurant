@@ -151,6 +151,7 @@ const ReserveATable = () => {
   const overlayClick = () => {
     setOverlayHere(false);
   };
+
   function Popup() {
     return (
       <div
@@ -501,14 +502,17 @@ const ReserveATable = () => {
             </h3>
           </fieldset>
           <FormInput
+            id="fullname"
             name="fullname"
             type="text"
             placeholder="Full Name"
-            errorMessage="Please tell us your name"
+            errorMessage="Something is wrong with the name you entered"
             label="Full Name"
+            pattern="^[a-zA-Z]+(?:\s+[a-zA-Z]+)*$"
             required
           />
           <FormInput
+            id="email"
             name="email"
             type="email"
             placeholder="Email"
@@ -517,6 +521,7 @@ const ReserveATable = () => {
             required
           />
           <FormInput
+            id="phone"
             name="phone"
             type="text"
             placeholder="Phone Number"
@@ -526,6 +531,7 @@ const ReserveATable = () => {
             required
           />
           <FormInput
+            id="notes"
             name="notes"
             type="text"
             placeholder="Any special accomodations needed?"

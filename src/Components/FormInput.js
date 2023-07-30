@@ -10,9 +10,10 @@ const FormInput = (props) => {
   };
   return (
     <div className="formInput">
-      <label>{label}</label>
+      <label htmlFor={id}>{label}</label>
       <input
         {...inputProps}
+        id={id}
         onChange={onChange}
         onBlur={handleFocus}
         focused={focused.toString()}
