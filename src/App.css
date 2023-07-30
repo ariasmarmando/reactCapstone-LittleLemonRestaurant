@@ -163,6 +163,11 @@
   grid-row: 4;
   font-size: 1.5vw;
 }
+.S-itemWrapper :nth-child(5):hover {
+  color: #495e57;
+  font-weight: bold;
+}
+
 .S-itemWrapper img {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
