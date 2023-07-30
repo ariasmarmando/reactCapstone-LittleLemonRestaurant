@@ -1,4 +1,5 @@
 import "../App.css";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const SpecialItem = (props) => {
   return (
@@ -7,7 +8,10 @@ const SpecialItem = (props) => {
       <p id="spItemName">{props.specialItemName}</p>
       <p id="spItemPrice">{props.specialItemPrice}</p>
       <p id="spItemDescription">{props.SpecialDesc}</p>
-      <a href={props.SpecialItemLink}>Order for delivery</a>
+      <a href={props.SpecialItemLink}>
+        Order for delivery{" "}
+        {<FaLongArrowAltRight fontSize="1em" color="#495e57" />}
+      </a>
     </div>
   );
 };
